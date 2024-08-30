@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinxia</title>
+    <style>
+        /* CSS styles for pastel pink theme */
+        body {
+            font-family: 'Architects Daughter', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd1dc; /* Pastel pink */
+            color: #333;
+            font-size: 17px;
+        }
+        header, footer {
+            background-color: #ffb6c1; /* Light pastel pink */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* Added for absolute positioning of logo */
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+        }
+        nav {
+            background-color: #ffc0cb; /* Lighter pastel pink */
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ffb6c1; /* Light pastel pink border */
+        }
+        th {
+            background-color: #ffb6c1; /* Light pastel pink */
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .small-image {
+            width: 250px;
+            height: 250px;
+        }
+        /* Styles for search bar */
+        .search-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+        .search-container button {
+            padding: 6px 10px;
+            margin-top: 8px;
+            background: #ffd1dc;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background: #ffd1dc;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        #discount {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>PINXIA DELIGHT RESTAURANT</h1>
+        <!-- Search bar -->
+        <div class="search-container">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <button onclick="searchMenu()">Search</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="discount.html">Discount</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="owner.html">Owner</a></li> 
+        </ul>
+    </nav>
+    <main>
+        <section id="discount">
+            <h2>Hari Diskon Terbatas - Setiap Jumat!!</h2>
+            <img class="small-image" src="diskon.png" alt="Diskon">
+            <p>Bergabunglah dengan kami setiap hari Jumat untuk hari diskon terbatas! Nikmati diskon 15% untuk semua hidangan utama dan makanan pembuka.</p>
+            <p>Jangan lewatkan kesempatan ini untuk bersantap bersama kami dengan harga menarik!</p>
+        </section>
+    </main>
+    <footer>
+        <p>Follow us on <a href="https://www.instagram.com/pinxiadelight">Instagram</a> for more updates!</p>
+        <p>Copyright © 2024 Pinxia Corporation All Rights Reserved.</p>
+    </footer>
+    <script>
+        function searchMenu() {
+            var searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            var menuLinks = document.querySelectorAll("nav ul li a");
+
+            for (var i = 0; i < menuLinks.length; i++) {
+                var linkText = menuLinks[i].innerText.toLowerCase();
+                if (linkText.includes(searchQuery)) {
+                    window.location.href = menuLinks[i].getAttribute("href");
+                    return;
+                }
+            }
+
+            // If no matching menu found, alert user
+            alert("No menu found matching your search query.");
+        }
+    </script>
+</body>
+</html>

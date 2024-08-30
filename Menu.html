@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinxia</title>
+    <style>
+        /* CSS styles for pastel pink theme */
+        body {
+            font-family: 'Architects Daughter', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd1dc; /* Pastel pink */
+            color: #333;
+            font-size: 17px;
+        }
+        header, footer {
+            background-color: #ffb6c1; /* Light pastel pink */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* Added for absolute positioning of logo */
+        }
+        nav {
+            background-color: #ffc0cb; /* Lighter pastel pink */
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ffb6c1; /* Light pastel pink border */
+        }
+        th {
+            background-color: #ffb6c1; /* Light pastel pink */
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .small-image {
+            width: 110px;
+            height: 110px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+        }
+        /* Styles for search bar */
+        .search-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+        .search-container button {
+            padding: 6px 10px;
+            margin-top: 8px;
+            background: #ffd1dc;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background: #ffd1dc;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #menu {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>PINXIA DELIGHT RESTAURANT</h1>
+        <!-- Search bar -->
+        <div class="search-container">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <button onclick="searchMenu()">Search</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="discount.html">Discount</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="owner.html">Owner</a></li> 
+        </ul>
+    </nav>
+    <main>
+        <section id="menu">
+            <h2>Menu - Masakan Indonesia</h2>
+            <h3>Hidangan Utama</h3>
+            <table>
+                <tr>
+                    <th>Menu</th>
+                    <th>Gambar</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                </tr>
+                <tr>
+                    <td>Rendang</td>
+                    <td><img class="small-image" src="rendang.jpg" alt="Rendang"></td>
+                    <td>Hidangan daging pedas yang berasal dari Sumatera Barat, dimasak dengan santan dan campuran serai, lengkuas, bawang putih, kunyit, jahe, dan cabai</td>
+                    <td>20.000</td>
+                </tr>
+                <tr>
+                    <td>Nasi Goreng</td>
+                    <td><img class="small-image" src="nasigoreng.jpg" alt="Nasi Goreng"></td>
+                    <td>Nasi goreng Indonesia dimasak dengan kecap manis, bawang merah, bawang putih, asam jawa, cabai, dan disertai dengan bahan lain seperti telur, ayam, udang, atau ikan asin</td>
+                    <td>10.000</td>
+                </tr>
+                <!-- New Main Dishes -->
+                <tr>
+                    <td>Sate Ayam</td>
+                    <td><img class="small-image" src="satayayam.jpg" alt="Sate Ayam"></td>
+                    <td>Potongan ayam yang dipanggang dan disajikan dengan saus kacang yang lezat</td>
+                    <td>15.000</td>
+                </tr>
+                <tr>
+                    <td>Ayam Betutu</td>
+                    <td><img class="small-image" src="ayambetutu.jpeg" alt="Ayam Betutu"></td>
+                    <td>Hidangan ayam tradisional Bali yang dimasak dengan bumbu rempah khas</td>
+                    <td>25.000</td>
+                </tr>
+                <!-- Additional Main Dish -->
+                <tr>
+                    <td>Ikan Bakar</td>
+                    <td><img class="small-image" src="ikanbakar.jpg" alt="Ikan Bakar"></td>
+                    <td>Ikan segar bakar dengan bumbu khas Bali yang pedas dan aromatik, disajikan dengan sambal matah</td>
+                    <td>35.000</td>
+                </tr>
+            </table>
+            <h3>Makanan Pembuka</h3>
+            <table>
+                <tr>
+                    <th>Menu</th>
+                    <th>Gambar</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                </tr>
+                <tr>
+                    <td>Gado-Gado</td>
+                    <td><img class="small-image" src="gadogado.avif" alt="Gado-Gado"></td>
+                    <td>Salad tradisional Indonesia yang terdiri dari campuran sayuran, tahu, tempe, dan telur rebus, disajikan dengan saus kacang</td>
+                    <td>10.000</td>
+                </tr>
+                <!-- New Appetizers -->
+                <tr>
+                    <td>Perkedel</td>
+                    <td><img class="small-image" src="perkedel.jpeg" alt="Perkedel"></td>
+                    <td>Gorengan kentang yang dicampur dengan daging cincang dan bumbu</td>
+                    <td>5.000</td>
+                </tr>
+                <tr>
+                    <td>Pempek</td>
+                    <td><img class="small-image" src="pempek.jpg" alt="Pempek"></td>
+                    <td>Hidangan ikan khas Palembang yang disajikan dengan kuah cuko</td>
+                    <td>8.000</td>
+                </tr>
+                <!-- Additional Appetizer -->
+                <tr>
+                    <td>Siomay</td>
+                    <td><img class="small-image" src="siomay.jpg" alt="Siomay"></td>
+                    <td>Dim sum ala Bandung yang terdiri dari daging ikan, udang, dan sayuran kukus, disajikan dengan saus kacang dan kecap</td>
+                    <td>12.000</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Follow us on <a href="https://www.instagram.com/pinxiadelight">Instagram</a> for more updates!</p>
+        <p>Copyright © 2024 Pinxia Corporation All Rights Reserved.</p>
+    </footer>
+    <script>
+        function searchMenu() {
+            var searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            var menuLinks = document.querySelectorAll("nav ul li a");
+
+            for (var i = 0; i < menuLinks.length; i++) {
+                var linkText = menuLinks[i].innerText.toLowerCase();
+                if (linkText.includes(searchQuery)) {
+                    window.location.href = menuLinks[i].getAttribute("href");
+                    return;
+                }
+            }
+
+            // If no matching menu found, alert user
+            alert("No menu found matching your search query.");
+        }
+    </script>
+</body>
+</html>
